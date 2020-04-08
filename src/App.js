@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+//import appWrapper from './components/AppWrapper.js';
+import Header from './components/Header.js';
+import Home from './components/Home.js';
+import Footer from './components/Footer.js';
+import Slides from './components/Slides';
+import Projects from './components/Projects.js';
+import Resume from './components/Resume.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const WrappedSlides = Slides(Resume, Home, Projects);
+
+class App extends Component {
+    state = {
+        index: 0,
+    };
+
+    handleChange = (event, value) => {
+        var v = 0;
+        if (event.target.id === 'resume'){
+            v = 0;
+        } else if (event.target.id === 'home'){
+            v = 1
+        } else {
+            v = 2;
+        }
+        this.setState({
+            index: v,
+        });
+    };
+
+    handleChangeIndex = index => {
+        this.setState({
+            index,
+        });
+    };
+
+    render() {
+        return (
+            <>
+                <div id="content-wrapper">
+                    <Header state={ this.state } handleChange={ this.handleChange }/>
+                    <WrappedSlides state={ this.state } handleChangeIndex={ this.handleChangeIndex } />
+                </div>
+                <Footer />
+            </>
+        );
+    }
 }
+
+//const WrappedApp = appWrapper(App);
 
 export default App;

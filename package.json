@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-flipcard-2": "^0.3.2",
+    "react-motion": "^0.5.2",
+    "react-scripts": "^3.4.0",
+    "swipeable": "^1.0.5",
+    "views": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
