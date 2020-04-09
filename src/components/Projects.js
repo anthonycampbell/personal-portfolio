@@ -1,62 +1,24 @@
 import React, { Component } from 'react';
 import { Motion, spring, StaggeredMotion } from 'react-motion';
+import FlipCard from './FlipCard';
 
 export default class Projects extends Component{
-    constructor(props){
-        super(props);
-        this.state = {isMouseEnter: false, isMouseLeave: false};
-        this.handleMouseEnter = this.handleMouseEnter.bind(this);
-        this.handleMouseLeave = this.handleMouseLeave.bind(this);
-    }
-
-    handleMouseEnter(e){
-        this.setState({isMouseEnter: true});
-        this.setState({isMouseLeave: false});
-    }
-
-    handleMouseLeave(e){
-        this.setState({isMouseLeave: true});
-        this.setState({isMouseEnter: false});
-    }
 
     render(){
-        const {isMouseEnter, isMouseLeave} = this.state;
         return(
             <div className="projects">
-
-                <StaggeredMotion
-                    defaultStyles={[{a: 0}, {a: 270}]}
-                    styles={prevInterpolatedStyles => {
-                        if (isMouseEnter){
-                            if (prevInterpolatedStyles[0].a > 89){
-                                return [{a: 90}, {a: spring(360)}]
-                            } else {
-                                return [{a: spring(90)}, {a: 270}]
-                            }
-                        }
-
-                        if (isMouseLeave){
-                            if (prevInterpolatedStyles[1].a < 271){
-                                return [{a: spring(0)}, {a: 270}];
-                            }
-                             else return [{a: 90}, {a: spring(270)}];
-                        }
-
-                        return (prevInterpolatedStyles);
-                    }}>
-                    {rotations =>
-                        <div className="flipCard"
-                        onMouseEnter={this.handleMouseEnter}
-                        onMouseLeave={this.handleMouseLeave}>
-                            <div className="front" style={{ transform: `rotateY(${rotations[0].a}deg)`}}>
-                                div1
-                            </div>
-                            <div className="back" style={{transform: `rotateY(${rotations[1].a}deg)`}}>
-                                div2
-                            </div>
-                        </div>
-                    }
-                </StaggeredMotion>
+                <FlipCard frontColor={'rgb(0, 191, 255)'}
+                          backColor={ 'rgb(221, 254, 89)'}
+                          frontContent={ "Vancouver Art Map" }
+                          backContent={ 'vancouverArtMapPhoto.png' } />
+                <FlipCard frontColor={ 'rgb(50, 205, 50)'}
+                          backColor={ 'rgb(219, 112, 147)'}
+                          frontContent={ 'Musqueam Survivor Pool' }
+                          backContent={ 'vancouverArtMapPhoto.png' } />
+                <FlipCard frontColor={'rgb(255,127,80)'}
+                          backColor={ 'rgb(128,0,128)'}
+                          frontContent={ 'Something else' }
+                          backContent={ 'vancouverArtMapPhoto.png' } />
             </div>
         );
     }
