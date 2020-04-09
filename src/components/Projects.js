@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Motion, spring, StaggeredMotion } from 'react-motion';
 import FlipCard from './FlipCard';
 
 export default class Projects extends Component{

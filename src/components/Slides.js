@@ -6,7 +6,7 @@ const Slides = (Res, Home, Pros) => {
         render() {
             const { index } = this.props.state;
             return(
-                <SwipeableViews index={index} onChangeIndex={ this.props.handleChangeIndex }>
+                <SwipeableViews index={ index } onChangeIndex={ this.props.handleChangeIndex }>
                     <Res />
                     <Home />
                     <Pros />

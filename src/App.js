@@ -15,24 +15,26 @@ class App extends Component {
         index: 0,
     };
 
-    handleChange = (event, value) => {
+    handleChange = (e) => {
         var v = 0;
-        if (event.target.id === 'resume'){
+        if (e.target.id === 'resume'){
             v = 0;
-        } else if (event.target.id === 'home'){
-            v = 1
+            e.target.nextSibling.style.backgroundColor = 'rgb(255, 165, 0)';
+            e.target.nextSibling.nextSibling.style.backgroundColor = 'rgb(255, 165, 0)';
+        } else if (e.target.id === 'home'){
+            v = 1;
+            e.target.previousSibling.style.backgroundColor = 'rgb(255, 165, 0)';
+            e.target.nextSibling.style.backgroundColor = 'rgb(255, 165, 0)';
         } else {
             v = 2;
+            e.target.previousSibling.style.backgroundColor = 'rgb(255, 165, 0)';
+            e.target.previousSibling.previousSibling.style.backgroundColor = 'rgb(255, 165, 0)';
         }
-        this.setState({
-            index: v,
-        });
+        this.setState({ index: v });
     };
 
     handleChangeIndex = index => {
-        this.setState({
-            index,
-        });
+        this.setState({ index });
     };
 
     render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Motion, spring, StaggeredMotion } from 'react-motion';
+import { spring, StaggeredMotion } from 'react-motion';
 
 export default class FlipCard extends Component{
     constructor(props){
@@ -50,7 +50,7 @@ export default class FlipCard extends Component{
                         </div>
                         <div className="back" style={{transform: `rotateY(${rotations[1].a}deg)`,
                                                       backgroundColor: this.props.backColor }}>
-                            <a href="http://anthonyc.pythonanywhere.com/art_map/">
+                            <a href="http://anthonyc.pythonanywhere.com/art_map/" alt="art map">
                                 <img src={this.props.backContent}
                                  style={{opacity: 0.7}}/>
                             </a>
