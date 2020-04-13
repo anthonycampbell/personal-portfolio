@@ -46,13 +46,13 @@ export default class FlipCard extends Component{
                                               onMouseLeave={this.handleMouseLeave}>
                         <div className="front" style={{ transform: `rotateY(${rotations[0].a}deg)`,
                                                         backgroundColor: this.props.frontColor }}>
-                            <h3> {this.props.frontContent} </h3>
+                            {this.props.frontContent}
                         </div>
                         <div className="back" style={{transform: `rotateY(${rotations[1].a}deg)`,
                                                       backgroundColor: this.props.backColor }}>
                             <a href="http://anthonyc.pythonanywhere.com/art_map/" alt="art map">
                                 <img src={this.props.backContent}
-                                 style={{opacity: 0.7}}/>
+                                 style={{opacity: 0.6}}/>
                             </a>
                         </div>
                     </div>}

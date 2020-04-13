@@ -12,7 +12,7 @@ const WrappedSlides = Slides(Resume, Home, Projects);
 
 class App extends Component {
     state = {
-        index: 0,
+        index: 1,
     };
 
     handleChange = (e) => {

@@ -32,30 +32,31 @@ export default class Header extends Component{
             <header>
                     <nav>
 	                    <ul>
-		                    <a href='#resume' id='resume' className='target'
+		                    <button id='resume'
 		                       onClick={ this.props.handleChange }
 		                       onMouseDown={ this.handleMouseDown }
 		                       onMouseUp= { this.handleMouseUp }
 		                       onMouseEnter = { this.handleMouseEnter }
 		                       onMouseLeave = { this.handleMouseLeave.bind(this, focusedElement) } >
 		                       Resume
-		                    </a>
-		                    <a href='#home' id='home' className='target'
+		                    </button>
+		                    <button id='home'
 		                       onClick={ this.props.handleChange }
 		                       onMouseDown={ this.handleMouseDown }
 		                       onMouseUp= { this.handleMouseUp }
 		                       onMouseEnter = { this.handleMouseEnter }
-		                       onMouseLeave = { this.handleMouseLeave.bind(this, focusedElement) } >
+		                       onMouseLeave = { this.handleMouseLeave.bind(this, focusedElement)}
+		                       style={{ backgroundColor: 'hsla(33, 100%, 45%, 1)'}} >
 		                       Home
-		                    </a>
-		                    <a href='#project' id='project' className='target'
+		                    </button>
+		                    <button id='project'
 		                       onClick={ this.props.handleChange }
 		                       onMouseDown={ this.handleMouseDown }
 		                       onMouseUp= { this.handleMouseUp }
 		                       onMouseEnter = { this.handleMouseEnter }
 		                       onMouseLeave = { this.handleMouseLeave.bind(this, focusedElement) } >
 		                       Projects
-		                    </a>
+		                    </button>
 		                </ul>
 	                </nav>
              </header>

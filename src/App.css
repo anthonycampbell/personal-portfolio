@@ -8,14 +8,16 @@ nav {
 	font-size: 0;
 }
 
-nav a {
+nav button {
 	display: inline-block;
 	min-width: calc(100% / 3 - 1px);
 	text-decoration: none;
+	background-color: rgb(255, 165, 0);
 	color: rgb(255, 255, 255);
 	padding: 10px 0;
 	font-size: 16px;
 	border-right: 1px solid rgb(0, 0, 0);
+	outline: none;
 }
 
 footer {
@@ -104,7 +106,6 @@ footer li a {
     border: 2px solid grey;
     border-radius: 10px;
     color: rgb(0, 0, 0);
-    padding: 5%;
 }
 
 .back {
@@ -117,13 +118,16 @@ footer li a {
     color: rgb(0, 0, 0);
 }
 
+.front h3 {
+    margin: 5%;
+}
+
 .flipCard {
-    margin-top: 10%;
-    margin-left: calc(100%/4 - 189px);
-    width: 250px;
-    height: 400px;
-    position: relative;
+    width: 189px;
+    height: 294px;
     display: inline-block;
+    position: relative;
+    margin: calc(100%/2 - 373px) calc(100%/6 - 94.5px);
 }
 
 #content-wrapper {
