@@ -50,9 +50,10 @@ export default class FlipCard extends Component{
                         </div>
                         <div className="back" style={{transform: `rotateY(${rotations[1].a}deg)`,
                                                       backgroundColor: this.props.backColor }}>
-                            <a href="http://anthonyc.pythonanywhere.com/art_map/" alt="art map">
+                            <a href={this.props.backURL} alt="art map" target="_blank" rel="noopener noreferrer">
                                 <img src={this.props.backContent}
-                                 style={{opacity: 0.6}}/>
+                                 style={{opacity: 0.6}}
+								 alt=''/>
                             </a>
                         </div>
                     </div>}
