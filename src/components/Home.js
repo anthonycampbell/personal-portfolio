@@ -5,19 +5,19 @@ export default class Home extends Component{
         return (
             <div className="profile">
 	            <h1>Anthony Campbell</h1>
-	            <img src="profile_pic.png" alt="profile pic" />
+	            <img src="profilePic.jpeg" alt="profile pic" />
 		        <h3>About me</h3>
-		        <p>Slave spirituals often had hidden double meanings.On one level,spirituals referenced heaven, Jesus,
-                    and the soul, but on another level, the songs spoke about slave resistance. For example, according
-			        to Frederick Douglass, the song “O Canaan, Sweet Canaan” spokeof slaves’ longing for heaven, but it
-			        also expressed their desire to escape to the North. Careful listeners heard this second meaning in
-			        the following lyrics: “I don’t expect to stay / Much longer here. / Run to Jesus, shun the danger. /
-			        I don’t expect to stay.” When slaves sang this song, they could have been speaking of their
-			        departure from this life and their arrival in heaven; however, they also could have been describing
-			        their plans to leave the South and run, not to Jesus, but to the North. Slaves even used songs like
-			        “Steal Away to Jesus (at midnight)” to announce to other slaves the time and place of secret,
-			        forbidden meetings. What whites heard as merely spiritual songs, slaves discerned as detailed
-			        messages. The hidden meanings in spirituals allowed slaves to sing what they could not say.</p>
+		        <p> I am currently working outside of my field. I am eager to break in to software development. I 
+					graduated with a bachelors in computer science from UBC. I am looking for some kind of entry role.
+					I am most interested in distributed systems because it was my favourite class, so, eventually I 
+					might like to do that, although I think I would need more practice in that area to make my most 
+					positive impact. To be honest, I just want to sharpen my hacking skills as much as I can. Working
+					on projects that people will actually use would mean a lot to me. Something I can point to and say
+					I made this would make me feel proud. The problems that software developers are challenged with 
+					are the kinds of problems that keep me interested. I like the feeling of learning that I get when
+					I draw some different possibilities for a problem and then encapsulate those for the solution. 
+					This will sound silly, but I love being a developer because it makes me feel like Mr Robot or
+					something.</p>
             </div>
         );
     }

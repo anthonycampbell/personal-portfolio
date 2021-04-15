@@ -25,7 +25,7 @@ export default class Projects extends Component{
                                             </ul>
                                          </div>}
                           backContent={ 'joyPhoto.png' }
-                          backURL={"http://ec2-18-217-42-253.us-east-2.compute.amazonaws.com/"} />
+                          backURL={"http://ec2-13-59-183-57.us-east-2.compute.amazonaws.com/"} />
                 <FlipCard frontColor={'rgb(0, 191, 255)'}
                           backColor={ 'rgb(221, 254, 89)'}
                           frontContent={ <div>
